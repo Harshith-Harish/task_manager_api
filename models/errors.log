@@ -1,0 +1,12 @@
+package models
+
+import "errors"
+
+var (
+	ErrEmptyTitle      = errors.New("task title cannot be empty")
+	ErrTitleTooLong    = errors.New("task title cannot exceed 255 characters")
+	ErrInvalidStatus   = errors.New("invalid status: must be pending, in_progress, or completed")
+	ErrInvalidPriority = errors.New("invalid priority: must be low, medium, or high")
+	ErrTaskNotFound    = errors.New("task not found")
+	ErrDatabaseError   = errors.New("database error occurred")
+)
